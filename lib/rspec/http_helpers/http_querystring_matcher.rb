@@ -13,6 +13,8 @@ module RSpec
       def initialize(expected, colorize: true)
         @expected = querystring_from(expected)
         @diff_format = colorize ? :color : :text
+      rescue ArgumentError => error
+        raise "Invalid expected value: #{error.message}"
       end
 
       def matches?(actual)
@@ -27,6 +29,10 @@ module RSpec
 
       def failure_message
         @wrong_type_error_message || diff_error_message
+      end
+
+      def failure_message_when_negated
+        "expected querystring not to match #{@expected}"
       end
 
       private
