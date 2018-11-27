@@ -40,7 +40,7 @@ module RSpec
       def uri_from(value)
         case value
         when nil then URI.parse('')
-        when /^http/ then URI.parse(value)
+        when /^https:/ then URI.parse(value)
         when /\?/ then URI.parse(value)
         when String then URI.parse("?#{value}")
         when URI::Generic then value

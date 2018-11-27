@@ -23,6 +23,10 @@ module RSpec
         expect('http://foo.com?foo=bar').to match_http_querystring('foo=bar')
       end
 
+      it 'does not mistake http prefixed query params' do
+        expect('https://foo.com?http=value').to match_http_querystring('http=value')
+      end
+
       it 'parses querystrings from HTTPS URIs' do
         expect('https://foo.com?foo=bar').to match_http_querystring('foo=bar')
       end
