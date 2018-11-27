@@ -101,7 +101,6 @@ module RSpec
           expect('abc=xyz').not_to match_http_querystring('abc=xyz')
         end.to raise_error('expected querystring not to match abc=xyz')
       end
-
     end
   end
 end
