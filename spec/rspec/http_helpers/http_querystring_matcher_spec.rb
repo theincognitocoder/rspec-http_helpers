@@ -82,14 +82,14 @@ module RSpec
 
       it 'raises an error when the actual value is not a supported type' do
         expected = 'foo=bar'
-        actual = Hash.new
+        actual = {}
         expect do
           expect(actual).to match_http_querystring(expected)
         end.to raise_error('expected URI with querystring matching foo=bar got Hash')
       end
 
       it 'raises an error when the expected value is not a supported type' do
-        expected = Hash.new
+        expected = {}
         actual = ''
         expect do
           expect(actual).to match_http_querystring(expected)
