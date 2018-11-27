@@ -5,8 +5,6 @@ require_relative 'http_helpers/http_querystring_matcher'
 module RSpec
   # RSpec matchers for HTTP requests and responses
   module HttpHelpers
-
-
     # Expects a HTTP URI or URI fragment to match the provided
     # querystring.
     #
@@ -16,7 +14,7 @@ module RSpec
     #
     #     expect('abc=xyz').to match_http_querystring('abc=xyz')
     #     expect('?abc=xyz').to match_http_querystring('abc=xyz')
-    #     expect(URI.parse('https://foo.com?abc=xyz')).to match_http_querystring('abc=xyz')
+    #     expect(URI.parse('...')).to match_http_querystring('abc=xyz')
     #
     # @param [String<HTTP Query>] expected
     # @raise [ArgumentError] Raises an ArgumentError if expected is
