@@ -1,4 +1,4 @@
-# Rspec Http Helpers
+# Rspec HTTP Helpers
 
 [![Build Status](https://travis-ci.org/theincognitocoder/rspec-http_helpers.svg?branch=master)](https://travis-ci.org/theincognitocoder/rspec-http_helpers)
 [![Coverage Status](https://coveralls.io/repos/github/theincognitocoder/rspec-http_helpers/badge.svg?branch=master)](https://coveralls.io/github/theincognitocoder/rspec-http_helpers?branch=master)
