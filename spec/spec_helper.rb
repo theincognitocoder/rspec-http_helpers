@@ -11,4 +11,4 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 ])
 SimpleCov.start
 
-require 'rspec-http_helpers'
+require 'rspec/http_helpers'
