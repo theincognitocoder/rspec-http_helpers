@@ -15,13 +15,21 @@ Rspec Http Helpers
 
 Add rspec-http_helpers to your project's Gemfile and then bundle install.
 
-```ruby
-gem 'rspec-http_helpers', '0.1.0-alpha'
-```
+    gem 'rspec-http_helpers', '~> 1.0'
 
 ## Basic Usage
 
-...
+Require from your spec helper:
+
+    # spec/spec_helper.rb
+
+    require 'rspec/http_helpers'
+
+Then use a matcher from your specs:
+
+    it '...' do
+      expect('https://foo.com?abc=xyz').to match_http_querystring('abc=xyz')
+    end
 
 ## License
 
